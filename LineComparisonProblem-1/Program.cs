@@ -1,4 +1,6 @@
-﻿namespace LineComparisonProblem_1
+﻿using System.ComponentModel.Design;
+
+namespace LineComparisonProblem_1
 {
     internal class Program
     {
@@ -18,7 +20,7 @@
             double y2 = Convert.ToDouble(Console.ReadLine());
             //For Finding The Length of a Line = sqrt( (x2 - x1) ^ 2 + (y2-y1) ^2)
             double lengthOfLine1 =Math.Sqrt(Math.Pow((x2 - x1), 2)+ Math.Pow((y2 - y1), 2));
-            //Console.WriteLine(lengthOfLine1);
+            Console.WriteLine(lengthOfLine1);
             //Finding Length of Line2
             Console.WriteLine("Enter l1 : ");
             double l1 = Convert.ToDouble(Console.ReadLine());
@@ -30,18 +32,24 @@
             double m2 = Convert.ToDouble(Console.ReadLine());
             //For Finding The Length of a Line = sqrt( (x2 - x1) ^ 2 + (y2-y1) ^2)
             double lengthOfLine2 = Math.Sqrt(Math.Pow((l2 - l1), 2) + Math.Pow((m2 - m1), 2));
-            //Console.WriteLine(lengthOfLine2);
+            Console.WriteLine(lengthOfLine2);
             if (lengthOfLine1 == lengthOfLine2)
             {
 
                 Console.WriteLine("Length of line1 is Equal to Length of line2");
             }
 
-            else
+            else if (lengthOfLine1 > lengthOfLine2) 
             {
 
-                Console.WriteLine("Length of line1 is Not Equal to Length of line2");
+                Console.WriteLine("Length of line1 is Gaterthan  Length of line2");
             }
+            else
+            {
+                Console.WriteLine("Length of line1 is Lessthan  Length of line2");
+
+            }
+
 
 
 
